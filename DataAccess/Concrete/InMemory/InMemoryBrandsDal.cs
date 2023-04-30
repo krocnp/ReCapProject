@@ -15,7 +15,7 @@ namespace DataAccess.Concrete.InMemory
         public InMemoryBrandsDal()
         {
             _brands = new List<Brands> {
-                new Brands { BrandId=1,BrandName="Range Over"},
+                new Brands { BrandId=1,BrandName="Range Rover"},
                 new Brands { BrandId=2,BrandName="Mercedes"},
                 new Brands { BrandId=3,BrandName="BWM"}
                 };
