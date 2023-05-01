@@ -18,10 +18,9 @@ namespace Business.Concrete
             _brandsDal = brandsDal;
         }
 
-        public List<Brands> GetById(int brandId)
+        public List<Brand> GetById(int brandId)
         {
-           return _brandsDal.GetById(brandId);
+            return _brandsDal.GetAll(b=>b.BrandId == brandId).ToList();
         }
-
     }
 }

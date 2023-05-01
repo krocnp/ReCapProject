@@ -9,6 +9,6 @@ namespace Business.Abstract
 {
     public interface IColorsService
     {
-        List<Colors> GetById(int colorId);
+        List<Color> GetById(int colorId);
     }
 }

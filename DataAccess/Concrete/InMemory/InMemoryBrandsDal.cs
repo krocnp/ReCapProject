@@ -3,6 +3,7 @@ using Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,22 +11,40 @@ namespace DataAccess.Concrete.InMemory
 {
     public class InMemoryBrandsDal : IBrandsDal
     {
-        List<Brands> _brands;
+        List<Brand> _brands;
 
         public InMemoryBrandsDal()
         {
-            _brands = new List<Brands> {
-                new Brands { BrandId=1,BrandName="Range Over"},
-                new Brands { BrandId=2,BrandName="Mercedes"},
-                new Brands { BrandId=3,BrandName="BWM"}
+            _brands = new List<Brand> {
+                new Brand { BrandId=1,BrandName="Range Rover"},
+                new Brand { BrandId=2,BrandName="Mercedes"},
+                new Brand { BrandId=3,BrandName="BWM"}
                 };
         }
-            
-        public List<Brands> GetById(int brandId)
+
+        public void Add(Brand entity)
         {
-            
-            return _brands.Where(p => p.BrandId == brandId).ToList();
+            throw new NotImplementedException();
         }
 
+        public void Delete(Brand entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Brand> Get(Expression<Func<Brand, bool>> filter)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Brand> GetAll(Expression<Func<Brand, bool>> filter = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Update(Brand entity)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
