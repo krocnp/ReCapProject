@@ -19,7 +19,7 @@ namespace DataAccess.Concrete.InMemory
                 new Brand { BrandId=1,BrandName="Range Rover"},
                 new Brand { BrandId=2,BrandName="Mercedes"},
                 new Brand { BrandId=3,BrandName="BWM"}
-                };
+            };
         }
 
         public void Add(Brand entity)
