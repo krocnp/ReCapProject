@@ -19,11 +19,9 @@ internal class Program
             Description = "Testing6"
         });
 
-
         foreach (var car in carsManager.GetAll())
         {
             Console.WriteLine("{0} {1} {2} {3} {4} {5}", car.CarId,car.BrandId, car.ColorId, car.ModelYear, car.DailyPrice, car.Description);
-
 
         }
 
