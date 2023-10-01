@@ -1,4 +1,5 @@
-﻿using DataAccess.Abstract;
+﻿using Core.DataAccess;
+using DataAccess.Abstract;
 using Entities.Concrete;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Concrete.InMemory
 {
-    public class InMemoryBrandsDal : IBrandsDal
+    public class InMemoryBrandsDal : IBrandDal
     {
         List<Brand> _brands;
 
@@ -19,7 +20,7 @@ namespace DataAccess.Concrete.InMemory
                 new Brand { BrandId=1,BrandName="Range Rover"},
                 new Brand { BrandId=2,BrandName="Mercedes"},
                 new Brand { BrandId=3,BrandName="BWM"}
-            };
+                };
         }
 
         public void Add(Brand entity)
@@ -43,6 +44,11 @@ namespace DataAccess.Concrete.InMemory
         }
 
         public void Update(Brand entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        Brand IEntityRepository<Brand>.Get(Expression<Func<Brand, bool>> filter)
         {
             throw new NotImplementedException();
         }

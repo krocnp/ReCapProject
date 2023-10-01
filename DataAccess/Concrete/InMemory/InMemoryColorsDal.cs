@@ -1,4 +1,5 @@
-﻿using DataAccess.Abstract;
+﻿using Core.DataAccess;
+using DataAccess.Abstract;
 using Entities.Concrete;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Concrete.InMemory
 {
-    public class InMemoryColorsDal : IColorsDal
+    public class InMemoryColorsDal : IColorDal
     {
         List<Color> _colors;
 
@@ -43,6 +44,11 @@ namespace DataAccess.Concrete.InMemory
         }
 
         public void Update(Color entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        Color IEntityRepository<Color>.Get(Expression<Func<Color, bool>> filter)
         {
             throw new NotImplementedException();
         }
